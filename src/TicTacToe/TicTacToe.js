@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TicTacToe.css";
 
 const TicTacToe = () => {
+	const [turn, setTurn] = useState("x");
+
 	const handleClick = (num) => {
-		alert("test");
+
+		if (turn === "x") {
+			setTurn("o");
+		} else {
+			setTurn("x");
+		}
 	};
+
 	const Cell = ({ num }) => {
 		return <td onClick={() => handleClick(num)}> - </td>;
 	};
