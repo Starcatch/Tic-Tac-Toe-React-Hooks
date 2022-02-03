@@ -6,5 +6,8 @@ table td {
 
 .container {
 	display: flex;
+	flex-direction: column;
+	width: 500px;
+	align-items: center;
 	justify-content: center;
 }
